@@ -8,10 +8,7 @@ const predicate = () => {
     return true;
 }
 
-const res = R.pipe(R.when(predicate, R.insert(0,thing)))(arr1)
+const res = R.pipe(R.when(!predicate, R.insert(0,thing)))(arr1)
 
 console.log('result:')
 console.log('res',res)
-
-
-
